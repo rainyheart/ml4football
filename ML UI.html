@@ -1,0 +1,440 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Tablecloth</title>
+<meta name="description" content="Tablecloth is unobtrusive way to add style and behaviour to html table elements.">
+</meta>
+<!-- paste this code into your webpage -->
+<link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
+<!-- end -->
+<style>
+
+/* 
+
+	TableCloth	
+	by Alen Grakalic, brought to you by cssglobe.com
+	
+*/
+
+/* general styles */
+
+table, td{
+	font:100% Arial, Helvetica, sans-serif; 
+}
+table{width:100%;border-collapse:collapse;margin:1em 0;}
+th, td{text-align:center;padding:.5em;border:1px solid #fff;}
+th{background:#328aa4 url(tr_back.gif) repeat-x;color:#fff;}
+td{background:#e5f1f4;}
+
+/* tablecloth styles */
+
+tr.even td{background:#e5f1f4;}
+tr.odd td{background:#f8fbfc;}
+
+th.over, tr.even th.over, tr.odd th.over{background:#4a98af;}
+th.down, tr.even th.down, tr.odd th.down{background:#bce774;}
+th.selected, tr.even th.selected, tr.odd th.selected{}
+
+td.over, tr.even td.over, tr.odd td.over{background:#ecfbd4;}
+td.down, tr.even td.down, tr.odd td.down{background:#bce774;color:#fff;}
+td.selected, tr.even td.selected, tr.odd td.selected{background:#bce774;color:#555;}
+
+/* use this if you want to apply different styling to empty table cells*/
+td.empty, tr.odd td.empty, tr.even td.empty{background:#fff;}
+
+body {
+	margin:0;
+	padding:0;
+	background:#e5f1f4;
+	font:90% Arial, Helvetica, sans-serif;
+	color:#555;
+	line-height:180%;
+	text-align:left;
+}
+a {
+	text-decoration:none;
+	color:#057fac;
+}
+a:hover {
+	text-decoration:none;
+	color:#999;
+}
+h1 {
+	font-size:220%;
+	margin:0 20px;
+	padding-top:1em;
+	line-height:1em;
+	color:#8bb544;
+	font-weight:normal;
+	font-family:Tahoma, Trebuchet MS, Arial, Helvetica, sans-serif;
+}
+h2 {
+	font-size:170%;
+	color:#8bb544;
+	font-weight:normal;
+	font-family:Tahoma, Trebuchet MS, Arial, Helvetica, sans-serif;
+}
+p.info {
+	margin:0 20px;
+	font-size:90%;
+	color:#999;
+}
+p.floater{
+	margin:0;
+	position:absolute;
+	top:2em;
+	right:20px;
+	float:left;
+	line-height:2em;
+	height:2em;
+	font-size:120%;
+	font-family:Tahoma, Trebuchet MS, Arial, Helvetica, sans-serif;
+}
+p.floater a{
+	float:left;
+	line-height:2em;
+	height:2em;
+	padding:0 20px;
+	background:#8bb544;
+	color:#fff;
+}
+p.floater a:hover{
+	background:#4a98af;
+	color:#fff;
+}
+code {
+	font-size:110%;
+}
+pre {
+	margin:1em 0;
+	padding:1em 20px;
+	line-height:150%;
+	background:#e5f1f4;
+	border-left:1px solid #a4d5e4;
+}
+table {
+	font-size:90%;
+}
+#container {
+	margin:0 auto;
+	margin-top:2em;
+	width:888px;
+	background:#fff;
+	padding-bottom:20px;
+	text-align:left;
+	position:relative;
+}
+#content {
+	margin:0 20px;
+}
+p.sig {
+	margin:0 auto;
+	width:888px;
+	padding:1em 0;
+	text-align:left;
+}
+</style>
+</head>
+<body>
+<div id="container">
+	<h1>人工智能单场</h1>
+	<p class="info"></p>
+	<div id="content">
+		<table cellspacing="0" cellpadding="0">
+			<tr>
+				<th rowspan="2">国家</th>
+				<th rowspan="2">赛事</th>
+				<th rowspan="2">时间</th>
+				<th rowspan="2">主队</th>
+				<th rowspan="2">客队</th>
+				<th colspan='3'>盘口</th>
+				<th colspan='2'>半场</th>
+			</tr>
+			<tr>
+				<th>让球</th>
+				<th>赔率</th>
+				<th>推介</th>
+				<th>赔率</th>
+				<th>推介</th>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+		</table>	
+	</div>
+</div>
+
+<div id="container">
+	<h1>人工智能串投</h1>
+	<p class="info"></p>
+	<div id="content">
+		<table cellspacing="0" cellpadding="0">
+			<tr>
+				<th rowspan="2">国家</th>
+				<th rowspan="2">赛事</th>
+				<th rowspan="2">时间</th>
+				<th rowspan="2">主队</th>
+				<th rowspan="2">客队</th>
+				<th colspan='3'>盘口</th>
+				<th colspan='2'>半场</th>
+			</tr>
+			<tr>
+				<th>让球</th>
+				<th>赔率</th>
+				<th>推介</th>
+				<th>赔率</th>
+				<th>推介</th>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr background:0;>
+			<td></td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr background:0;>
+			<td></td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+			<tr>
+				<th>英格兰</th>
+				<td>英超</td>
+				<td>2016-12-03 20:30</td>
+				<td>曼彻斯特城</td>
+				<td>切尔西</td>
+				<td>0.5</td>
+				<td>1.06</td>
+				<td>主胜</td>
+				<td>1.56</td>
+				<td>1:0</td>
+			</tr>
+		</table>	
+	</div>
+</div>
+	
+</body>
+</html>
+
