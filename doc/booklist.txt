@@ -1,0 +1,9 @@
+Python机器学习及实践：从零开始通往Kaggle竞赛之路 - this book has sample on tensorflow, worth to read and buy.
+神经网络与深度学习 - this book is very hot.
+深入理解机器学习：从原理到算法 - 全面清晰地讨论了机器学习理论领域重要的算法和思想
+统计学习方法(author:李航) - it's a good book to learn algorithm
+用Python写网络爬虫 - this book is very rubbish. 
+深度学习：21天实战Caffe - caffe是一个清晰，可读性高，快速的深度学习框架, it's another machine learning framework, but we won't use it. 
+机器学习实战 - sounds like a good book, it uses python as sample. 
+机器学习 (作者:周志华) - 
+机器学习 (作者:[英] 弗拉赫（Peter Flach）)
