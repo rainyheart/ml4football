@@ -1,0 +1,115 @@
+
+<section>
+	<!-- left side start-->
+	<div ng-include="'left_menu.html'"></div>
+	<!-- left side end-->
+	<!-- main content start-->
+	<div class="main-content">
+		<!-- header section start-->
+		<div class="header-section">
+
+			<!--toggle button start-->
+			<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+			<!--toggle button end-->
+
+		</div>
+		<!-- header section end-->
+
+		<!-- page heading start-->
+		<div class="page-heading">
+			<h3>生物种类</h3>
+		</div>
+		<!-- news list start  -->
+		<div ng-controller="bioSpecificationAddController">
+			<form class="form-horizontal">
+				<input type="hidden" ng-model="id"> <input ng-model="id"
+					type="hidden" placeholder="id">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">生物目录名称:</label>
+					<div class="col-sm-10">
+						<!-- 
+									<input ng-model="bioCatId"  placeholder="bioCatId">
+								 -->
+						<select ng-model="bioCatId"
+							ng-options="x.id as x.bioCatName for x in list">
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">基本信息介紹:</label>
+					<div class="col-sm-10">
+						<!-- 
+							<input ng-model="basicInfo" placeholder="basicInfo">
+						 -->
+						<textarea class="wysihtml5 form-control" rows="9" cols="5"
+							ng-model="basicInfo"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">項目進展:</label>
+					<div class="col-sm-10">
+						<!-- 
+						<input ng-model="projectProgressBrifeDes"
+							placeholder="projectProgressBrifeDes">
+						 -->
+						<textarea class="wysihtml5 form-control" rows="9" cols="5"
+							ng-model="projectProgressBrifeDes"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">图片音频路径:</label>
+					<div class="col-sm-10">
+						<input ng-model="basicVideoDesPath"
+							placeholder="basicVideoDesPath">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">项目进展详细信息:</label>
+					<div class="col-sm-10">
+						<textarea class="wysihtml5 form-control" rows="9" cols="5"
+							ng-model="projectProgressDetailDes"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">相关数据库:</label>
+					<div class="col-sm-10">
+						<input ng-model="databaseId" placeholder="databaseId">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">相关文章:</label>
+					<div class="col-sm-10">
+						<input ng-model="relativeActicleId"
+							placeholder="relativeActicleId">
+					</div>
+				</div>
+				<div>
+					&nbsp;
+					<button class="btn btn-success" ng-click="bioSpecification_save();">
+						<span class="save"></span>保持
+					</button>
+					&nbsp;
+					<button class="btn btn-warning" ng-click="bioSpecification_list();">
+						<span class="update"></span>返回
+					</button>
+					</button>
+				</div>
+		</div>
+		</form>
+		<hr>
+	</div>
+	<!-- news list end  -->
+
+	<!-- page heading end-->
+
+	<!--body wrapper start-->
+	<!--body wrapper end-->
+
+	<!--footer section start-->
+	<footer> 2016 &copy; Developed by Shirley </footer>
+	<!--footer section end-->
+	</div>
+	<!-- main content end-->
+</section>
+

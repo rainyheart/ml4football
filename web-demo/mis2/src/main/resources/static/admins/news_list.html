@@ -1,0 +1,98 @@
+<body class="sticky-header">
+<div ng-controller="newsController">
+
+	<section>
+		<!-- left side start-->
+		<div ng-include="'left_menu.html'"></div>
+		<!-- left side end-->
+		<!-- main content start-->
+		<div class="main-content" >
+			<!-- header section start-->
+			<div class="header-section">
+
+				<!--toggle button start-->
+				<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+				<!--toggle button end-->
+
+				<!--search start-->
+				<input type="text" class="form-control" ng-model="searchText" placeholder="Search here..." />
+				<!--search end-->
+
+			</div>
+			<!-- header section end-->
+
+			<!-- page heading start-->
+			<div class="page-heading">
+				<h3>新闻动态</h3>
+			</div>
+			<div>
+				&nbsp;
+				&nbsp;
+				<button class="btn btn-success" ng-click="news_add();">
+					<span class="save"></span>新增
+				</button>
+			</div>
+			<!-- news list start  -->
+			<div>
+				<div class="panel-body">
+					<table class="table  table-hover general-table">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>标题</th>
+								<th>作者</th>
+								<th>发布日期</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="news in items | filter:searchText">
+								<td ng-bind="$index+1">1</td>
+								<td><a ng-click="news_edit(news.id);"> {{ news.subject }} </a></td>
+								<td class="hidden-phone">{{ news.createBy.username }}</td>
+								<td>{{ news.createDate | date:'mediumDate'}}</td>
+								<td><span class="label label-warning label-mini">Due</span></td>
+								<td><input type="hidden" ng-model="mId" />
+									<button type="button" class="btn btn-primary"
+										ng-click="news_edit(news.id)">修改</button>
+									<button type="button" class="btn btn-danger"
+										ng-click="news_remove(news.id)">删除</button></td>
+							</tr>
+						</tbody>
+					</table>
+					<nav>
+						<ul class="pagination">
+							<li><a ng-click="Previous()"> <span>上一页</span>
+							</a></li>
+							<li ng-repeat="page in pageList"
+								ng-class="{active: isActivePage(page)}"><a
+								ng-click="selectPage(page)">{{ page }}</a></li>
+							<li><a ng-click="Next()"> <span>下一页</span>
+							</a></li>
+						</ul>
+					</nav>
+				</div>
+				<hr>
+			</div>
+			<!-- news list end  -->
+
+			<!-- page heading end-->
+
+			<!--body wrapper start-->
+			<!--body wrapper end-->
+
+			<!--footer section start-->
+			<footer> 2016 &copy; Developed by Shirley </footer>
+			<!--footer section end-->
+
+
+		</div>
+		<!-- main content end-->
+	</section>
+
+	
+
+</div>
+</body>
+</html>

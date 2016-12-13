@@ -1,0 +1,340 @@
+/*--------------------------jumbotron STARTS--------------------------*/
+.jumbotron {
+  background-color: #ffffff;
+  padding-top: 5px;	
+  padding-bottom: 0px;  
+  margin-bottom: 20px;
+}
+
+.chn-title {
+  color: #005825;
+  padding-left: 12px;
+  padding-top: 35px;
+  line-height: 10px;
+  margin-top: 0px; 
+  /*text-align: center;*/
+}
+
+.chn-title p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.eng-title {
+  color: #005825;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-right: -30px;
+  line-height: 25px;
+  /*text-align: center;*/
+}
+
+.eng-title p {
+  font-size: 16.46px;
+  font-weight: bold;
+  /*text-align: justify;*/
+}
+/*--------------------------jumbotron ENDS--------------------------*/
+
+
+/*--------------------------search-box STARTS--------------------------*/
+.search-box {
+  margin-left: 30px;
+  padding-top: 12px;
+  /*padding-right: 33px;*/
+}
+
+#custom-search-input .search-query {
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    border: solid 2px #005825;
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 6px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 5px;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:#005825;
+} 
+
+/*#custom-search-input{
+  height: 32px;
+  border: solid 2px #005825;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+#custom-search-input input{
+    height: 30px;
+    border-bottom: solid 2px #005825;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    height: 30px;
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #005825;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #005825;
+}
+
+#custom-search-input .glyphicon-search{
+    height: 30px;
+    font-size: 22px;
+}*/
+
+/*--------------------------search-box ENDS--------------------------*/
+
+
+/*--------------------------blog-nav STARTS--------------------------*/
+.blog-masthead {
+  background-color: #005825;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+.blog-nav {
+  padding-left: 70px;
+}
+
+/* Nav links */
+.blog-nav-item {
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 23px 10px 23px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 8px;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: yellow;
+  /*background-color: #2F4F4F;*/
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  background-color: #218868;
+  color: #fff;
+}
+
+/*.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}*/
+/*--------------------------blog-nav ENDS--------------------------*/
+
+
+/*--------------------------project-introduction STARTS--------------------------*/
+.project-introduction {
+  padding-left: 40px;
+}
+
+.project-introduction-title {
+  padding-left: 10px;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  font-size: 20px;
+  /*padding-bottom: 5px;*/
+}
+
+.project-introduction-paragraph {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  font-size: 15px;
+  text-indent: 2em;
+  line-height: 25px;
+  margin:5px;
+}
+/*--------------------------project-introduction EDNS--------------------------*/
+
+
+/*--------------------------sidebar STARTS--------------------------*/
+.sidebar {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+/*--------------------------sidebar ENDS--------------------------*/
+
+
+/*--------------------------panel STARTS--------------------------*/
+.panel-title {
+  font-size: 20px;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+}
+
+.panel-body {
+  font-size: 20px;
+  padding-bottom: 5px;
+  background-color: #F8F8FF;
+}
+/*--------------------------panel ENDS--------------------------*/
+
+
+/*--------------------------news&notification STARTS--------------------------*/
+
+.news-ul, .notification-ul {
+    padding: 0px 0px;
+}
+
+.news-ul li, .notification-ul li {
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.news-title, .notification-title  {
+  width:80%;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+.news-ul, .notification-ul {
+  list-style-type: none;
+}
+
+.news-ul a {
+  color: #005825;
+}
+
+.notification-ul a {
+    color: #005825;
+}
+
+.news-ul span, .notification-ul span {
+  float:right;  
+}
+
+.more-news, .more-notifications {
+  float: right;
+  padding: 17px 15px 10px 15px;
+}
+
+.more-news a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #3C763D;
+}
+
+.more-notifications a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #A94442;
+}
+
+.more-news a:hover, .more-notifications a:hover {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+/*--------------------------news&notification ENDS--------------------------*/
+
+
+.page-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  font-family: Microsoft YaHei;
+}
+
+.coop1,.coop2,.coop3,.coop4 {
+  text-align: center;
+  /*padding-top: 0px;*/
+}
+
+.coop1 {
+  margin-top: 2px;
+}
+
+.coop2 {
+  margin-top: 10px;
+}
+
+.coop3 {
+  padding-top: 16px;
+}
+
+.coop4 {
+  margin-top: 7px;
+}
+
+.footer {
+  font-size: 13px;
+}
+
+.QRcode-reminder {
+  /*text-align: center;*/
+  margin-left: -9px;
+  margin-bottom: -10px;
+  /*padding-top: 30px;*/
+}
+/*--------------------------carousel STARTS--------------------------*/
+/*
+.item {
+  background-color:grey; 
+  text-align: center;
+  height: 180px;
+}
+
+.carousel-indicators li {
+  background-color: black;
+  cursor: pointer;
+}
+
+.carousel-control {
+    width: 60px;
+    height: 0;
+    margin-top: 150px;
+    font-size: 100px;
+    background: none;
+    border: none;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 25;
+  margin: 0;
+  padding: 0 5px 25px 0;
+  text-align: right;
+}*/
+/*--------------------------carousel ENDS--------------------------*/

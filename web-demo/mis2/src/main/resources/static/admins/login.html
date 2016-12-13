@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="misApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>Login</title>
+
+    <link href="/bower_components/bootstrap/dist/css/style.css" rel="stylesheet">
+    <link href="/bower_components/bootstrap/dist/css/style-responsive.css" rel="stylesheet">
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular/angular-ui-router.js"></script>
+<script src="/js/app.js"></script>
+<script src="/admins/js/login_ctrl.js"></script>
+</head>
+
+<body class="login-body" >
+
+<div class="container"  >
+
+    <form class="form-signin" action="#">
+        <div class="form-signin-heading text-center">
+            <h1 class="sign-title">登录</h1>
+        </div>
+        <div class="login-wrap" >
+            <input ng-model="user.username" class="form-control">
+            <input type="password" ng-model="user.password" class="form-control" >
+
+            <button class="btn btn-lg btn-login btn-block" type="button" ng-click="login()">登录 - 
+                <i class="fa fa-check"></i>
+            </button>
+
+            <div class="registration">
+                还不是会员?
+                <a class="" href="＃">
+                    注册
+                </a>
+            </div>
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"> 记住我
+                <span class="pull-right">
+                    <a data-toggle="modal" href="#myModal"> 忘记密码?</a>
+
+                </span>
+            </label>
+
+        </div>
+
+    </form>
+
+</div>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="/bower_components/bootstrap/js/jquery-1.10.2.min.js"></script>
+<script src="/bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script src="/bower_components/bootstrap/js/modernizr.min.js"></script>
+
+</body>
+</html>

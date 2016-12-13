@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>首页</title>
+    <link rel='icon' href='/pics/logo.jpg' type='image/x-ico' /> 
+
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<script src="/bower_components/angular/angular.min.js"></script>
+		<script src="/js/app.js"></script>
+		<script src="/views/js/article_ctrl.js"></script>
+
+		<link href="/custom_css/index.css" rel="stylesheet">
+		<script type="text/javascript">
+			$.get("/header.html",function(data){
+				$("#header").html(data);
+			});
+			$.get("/footer.html",function(data){
+				$("#footer").html(data);
+			});
+		</script>
+  </head>
+
+  <body ng-app="misApp">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- #include file = "header.html" --> 
+	<div id="header">
+	
+	</div>
+    <div class="container" ng-controller="articleCtrl">
+      <div class="row">
+
+        <div class="panel">
+          
+          <div class="row">
+            <div class="list-group">
+              <div class="panel panel-success">
+              <ul>
+                  标题
+                  <span class="badge right">发表日期</span>
+              </ul>
+                <div class="panel-body">    
+                <ul class="news-ul">
+                    <li ng-repeat="article in list">                      
+                      <span class="news-date">{{ article.createDate | date:'mediumDate'}}</span>
+                      <div class="news-title">
+                        <a href="http://news2.sysu.edu.cn/news01/147148.htm">
+                        <nobr>{{ article.subject }}</nobr></a>
+                      </div>
+                    </li>
+                  </ul> 
+                </div>   <!-- /.panel-body -->
+              </div><!-- /.panel-success -->
+
+
+            </div><!-- col-sm-11 col-sm-offset-1 -->
+          </div><!-- /row -->   
+
+        </div><!-- /.sidebar -->
+      </div> <!-- /row -->
+
+      <hr>
+      <div id="footer">
+      
+	</div>
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>

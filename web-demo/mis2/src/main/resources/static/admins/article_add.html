@@ -1,0 +1,108 @@
+	<section>
+		<!-- left side start-->
+		<div ng-include="'left_menu.html'"></div>
+		<!-- left side end-->
+		<!-- main content start-->
+		<div class="main-content" >
+			<!-- header section start-->
+			<div class="header-section">
+
+				<!--toggle button start-->
+				<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+				<!--toggle button end-->
+
+			</div>
+			<!-- header section end-->
+
+			<!-- page heading start-->
+			<div class="page-heading">
+				<h3>发表文章操作</h3>
+			</div>
+			<!-- news list start  -->
+			<div ng-controller="articleAddController">
+                <form class="form-horizontal">
+                	<input type="hidden" ng-model="id">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">主题:</label>
+							<div class="col-sm-10">
+								<input ng-model="subject"  placeholder="subject">
+							</div>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">内容:</label>
+							<div class="col-sm-10">
+								<input ng-model="content"  placeholder="content">
+							</div>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">创建日期:</label>
+							<label class="col-sm-2 " ng-model="createDate">{{ createDate| date:'mediumDate'}}</label>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">创建者:</label>
+							<label class="col-sm-2 " ng-model="createBy">{{ createBy}}</label>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">更新日期:</label>
+							<label class="col-sm-2 " ng-model="updateDate">{{ updateDate| date:'mediumDate'}}</label>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">更新者:</label>
+							<label class="col-sm-2 " ng-model="updateBy">{{ updateBy}}</label>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">状态:</label>
+							<div class="col-sm-10">
+								<input ng-model="status"  placeholder="status">
+							</div>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">作者:</label>
+							<div class="col-sm-10">
+								<input ng-model="author"  placeholder="author">
+							</div>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">发布日期:</label>
+							<div class="col-sm-10">
+								<input ng-model="publishDate"  placeholder="publishDate">
+							</div>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">周期:</label>
+							<div class="col-sm-10">
+								<input ng-model="periodicals"  placeholder="periodicals">
+							</div>
+					  	</div> 
+						<div class="form-group">
+							<label class="col-sm-2 control-label">数据分析:</label>
+							<div class="col-sm-10">
+								<input ng-model="dataAnalyzeId"  placeholder="dataAnalyzeId">
+							</div>
+					  	</div> 
+									  <div>
+				&nbsp;<button class="btn btn-success" ng-click="article_save();">
+				<span class="save"></span>保存
+				</button>
+				&nbsp;<button class="btn btn-warning" ng-click="article_list();">
+				<span class="update"></span>返回
+				</button>
+				</button>
+			</div>
+				</form>
+				<hr>
+			</div>
+			<!-- news list end  -->
+			
+			<!-- page heading end-->
+
+			<!--body wrapper start-->
+			<!--body wrapper end-->
+
+			<!--footer section start-->
+			<footer> 2016 &copy; Developed by Shirley </footer>
+			<!--footer section end-->
+		</div>
+		<!-- main content end-->
+	</section>
+

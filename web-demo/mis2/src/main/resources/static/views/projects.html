@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+<link href="/bower_components/bootstrap/dist/css/style.css"
+	rel="stylesheet">
+<link href="/bower_components/bootstrap/dist/css/style-responsive.css"
+	rel="stylesheet">
+<!--dashboard calendar-->
+<link href="/bower_components/bootstrap/dist/css/clndr.css"
+	rel="stylesheet">
+
+<!--Morris Chart CSS 
+<link rel="stylesheet"
+	href="/bower_components/bootstrap/js/morris-chart/morris.css">
+-->
+
+<script src="/bower_components/angular/angular.min.js"></script>
+<!-- 
+<script src="/js/service/news_service.js"></script>
+ -->
+<script src="/js/app.js"></script>
+<script src="/js/controller/news_controller.js"></script>
+
+<link href="custom_css/index.css" rel="stylesheet">
+		<script type="text/javascript">
+			$.get("../header.html",function(data){
+				$("#header").html(data);
+			});
+			$.get("../footer.html",function(data){
+				$("#footer").html(data);
+			});
+		</script>
+</head>
+<body class="sticky-header" ng-app="misApp" >
+
+	<div id="header"></div>
+	
+	
+	<section>
+		<!-- left side start-->
+		<div class="left-side sticky-left-side">
+			<!--logo and iconic logo start-->
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="logo-icon text-center">
+				<a href="index.html"><img src="images/logo_icon.png" alt=""></a>
+			</div>
+			<!--logo and iconic logo end-->
+			<div class="left-side-inner">
+
+				<!-- visible to small devices only -->
+				<div class="visible-xs hidden-sm hidden-md hidden-lg">
+					<div class="media logged-user">
+						<img alt="" src="images/photos/user-avatar.png"
+							class="media-object">
+						<div class="media-body">
+							<h4>
+								<a href="#">John Doe</a>
+							</h4>
+							<span>"Hello There..."</span>
+						</div>
+					</div>
+
+					<h5 class="left-nav-title">Account Information</h5>
+					<ul class="nav nav-pills nav-stacked custom-nav">
+						<li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+						<li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+						<li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign
+									Out</span></a></li>
+					</ul>
+				</div>
+
+				<!--sidebar nav start-->
+				<ul class="nav nav-pills nav-stacked custom-nav">
+					<li class="active"><a href="views/news.html"><i
+							class="fa fa-home"></i> <span>Dashboard</span></a></li>
+					<li class="menu-list"><a href=""><i class="fa fa-laptop"></i><span>新闻动态</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="http://localhost:8080/news">列表</a></li>
+							<li><a href="horizontal_menu.html"> Horizontal Menu</a></li>
+						</ul></li>
+					<li class="menu-list"><a href=""><i class="fa fa-book"></i>
+							<span>关于项目</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="general.html">Team</a></li>
+							<li><a href="buttons.html"> Member</a></li>
+						</ul></li>
+					<li><a href="login.html"><i class="fa fa-sign-in"></i> <span>Login
+								Page</span></a></li>
+				</ul>
+				<!--sidebar nav end-->
+
+			</div>
+		</div>
+		<!-- left side end-->
+		<!-- main content start-->
+		<div class="main-content" >
+
+					
+
+			<!-- header section start-->
+			<div class="header-section">
+
+				<!--toggle button start-->
+				<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+				<!--toggle button end-->
+
+				<!--search start-->
+				<form class="searchform" action="index.html" method="post">
+					<input type="text" class="form-control" name="keyword"
+						placeholder="Search here..." />
+				</form>
+				<!--search end-->
+
+				<!--notification menu start -->
+				<!--notification menu end -->
+
+			</div>
+			<!-- header section end-->
+
+			<!-- page heading start-->
+			<div class="page-heading">
+				<h3>新闻动态</h3>
+			</div>
+			<!-- news list start  -->
+			<div ng-controller="newsController">
+				<div class="panel-body">
+	                <table class="table  table-hover general-table">
+	                    <thead>
+	                    <tr>
+	                        <th>标题</th>
+	                        <th>作者</th>
+	                        <th>发布日期</th>
+	                        <th>状态</th>
+	                        <th>操作</th>
+	                    </tr>
+	                    </thead>
+	                    <tbody>
+                           <tr ng-repeat="news in newsList">
+	                        <td>
+	                            <a href="#">
+	                                {{ news.subject }}
+	                            </a>
+	                        </td>
+	                        <td class="hidden-phone">{{ news.createBy.username }}</td>
+	                        <td>{{ news.createDate | date:'mediumDate'}}</td>
+	                        <td><span class="label label-warning label-mini">Due</span></td>
+	                        <td>
+	                        	<input type="hidden" ng-model="mId"/>
+	                            <button type="button" class="btn btn-primary" ng-click="editNews('edit',news.subject,news.content,news.id)">修改</button>
+	                            <button type="button" class="btn btn-danger" ng-click="deleteNews(news.id)">删除</button>
+	                        </td>
+	                    </tr>                   
+	
+	                    </tbody>
+	                </table>
+                </div>
+                
+                <form class="form-horizontal">
+				  <div class="form-group">
+				    <label class="col-sm-2 control-label">标题:</label>
+				    <div class="col-sm-10">
+				    <input type="text" ng-model="mSubject"  placeholder="标题">
+				    </div>
+				  </div> 
+				  <div class="form-group">
+				    <label class="col-sm-2 control-label">内容:</label>
+				    <div class="col-sm-10">
+				    <input type="text" ng-model="mContent"  placeholder="内容">
+				    </div>
+				  </div>
+				</form>
+				
+				<hr>
+				<button class="btn btn-success" ng-click="addNews();">
+				<span class="glyphicon glyphicon-save"></span>修改
+				</button>
+			</div>
+			<!-- news list end  -->
+			
+			<!-- page heading end-->
+
+			<!--body wrapper start-->
+			<!--body wrapper end-->
+
+			<!--footer section start-->
+			<footer> 2016 &copy; Developed by Shirley </footer>
+			<!--footer section end-->
+
+
+		</div>
+		<!-- main content end-->
+	</section>
+
+	<!-- Placed js at the end of the document so the pages load faster -->
+	<script src="/bower_components/bootstrap/js/jquery-1.10.2.min.js"></script>
+	<script
+		src="/bower_components/bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="/bower_components/bootstrap/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/bower_components/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/bower_components/bootstrap/js/modernizr.min.js"></script>
+	<script src="/bower_components/bootstrap/js/jquery.nicescroll.js"></script>
+
+	<!--easy pie chart-->
+	<script
+		src="/bower_components/bootstrap/js/easypiechart/jquery.easypiechart.js"></script>
+	<script
+		src="/bower_components/bootstrap/js/easypiechart/easypiechart-init.js"></script>
+
+	<!--Sparkline Chart-->
+	<script
+		src="/bower_components/bootstrap/js/sparkline/jquery.sparkline.js"></script>
+	<script src="/bower_components/bootstrap/js/sparkline/sparkline-init.js"></script>
+
+	<!--icheck -->
+	<script src="/bower_components/bootstrap/js/iCheck/jquery.icheck.js"></script>
+	<script src="/bower_components/bootstrap/js/icheck-init.js"></script>
+
+	<!-- jQuery Flot Chart-->
+	<script src="/bower_components/bootstrap/js/flot-chart/jquery.flot.js"></script>
+	<script
+		src="/bower_components/bootstrap/js/flot-chart/jquery.flot.tooltip.js"></script>
+	<script
+		src="/bower_components/bootstrap/js/flot-chart/jquery.flot.resize.js"></script>
+
+
+	<!--Morris Chart-->
+	<script src="/bower_components/bootstrap/js/morris-chart/morris.js"></script>
+	<script src="/bower_components/bootstrap/js/morris-chart/raphael-min.js"></script>
+
+	<!--Calendar-->
+	<script src="/bower_components/bootstrap/js/calendar/clndr.js"></script>
+	<script
+		src="/bower_components/bootstrap/js/calendar/evnt.calendar.init.js"></script>
+	<script src="/bower_components/bootstrap/js/calendar/moment-2.2.1.js"></script>
+	<script
+		src="/js/underscore-min.js"></script>
+
+	<!--common scripts for all pages-->
+	<script src="/bower_components/bootstrap/js/scripts.js"></script>
+
+	<!--Dashboard Charts-->
+	<script src="/bower_components/bootstrap/js/dashboard-chart-init.js"></script>
+
+
+</body>
+</html>

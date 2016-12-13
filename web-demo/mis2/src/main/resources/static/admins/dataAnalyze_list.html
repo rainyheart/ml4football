@@ -1,0 +1,92 @@
+<body class="sticky-header">
+	<div ng-controller="dataAnalyzeController">
+
+		<section>
+			<!-- left side start-->
+			<div ng-include="'left_menu.html'"></div>
+			<!-- left side end-->
+			<!-- main content start-->
+			<div class="main-content">
+				<!-- header section start-->
+				<div class="header-section">
+
+					<!--toggle button start-->
+					<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+					<!--toggle button end-->
+
+					<!--search start-->
+					<input type="text" class="form-control" ng-model="searchText"
+						placeholder="Search here..." />
+					<!--search end-->
+
+				</div>
+				<!-- header section end-->
+
+				<!-- page heading start-->
+				<div class="page-heading">
+					<h3>数据分析</h3>
+				</div>
+				<div>
+					&nbsp; &nbsp;
+					<button class="btn btn-success" ng-click="dataAnalyze_add();">
+						<span class="save"></span>新建
+					</button>
+				</div>
+				<!-- news list start  -->
+				<div>
+					<div class="panel-body">
+						<table class="table  table-hover general-table">
+							<thead>
+								<tr>
+									<th>序号</th>
+									<th>数据分析分类</th>
+									<th>数据分析主题</th>
+									<th>数据分析连接</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="dataAnalyze in items | filter:searchText">
+									<td ng-bind="$index+1"><a
+										ng-click="dataAnalyze_edit(dataAnalyze.id);">1</a></td>
+									<td>{{ dataAnalyze.dataAnalyzeCategory.analyzeTypeName }}</td>
+									<td>{{ dataAnalyze.dataAnalyzeTitle }}</td>
+									<td>{{ dataAnalyze.dataAnalyzeLink }}</td>
+									<td>
+										<button type="button" class="btn btn-primary"
+											ng-click="dataAnalyze_edit(dataAnalyze.id)">Amend</button>
+										<button type="button" class="btn btn-danger"
+											ng-click="dataAnalyze_remove(dataAnalyze.id)">Delete</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<nav>
+							<ul class="pagination">
+								<li><a ng-click="Previous()"> <span>上一页</span>
+								</a></li>
+								<li ng-repeat="page in pageList"
+									ng-class="{active: isActivePage(page)}"><a
+									ng-click="selectPage(page)">{{ page }}</a></li>
+								<li><a ng-click="Next()"> <span>下一页</span>
+								</a></li>
+							</ul>
+						</nav>
+					</div>
+					<hr>
+				</div>
+				<!-- news list end  -->
+
+				<!-- page heading end-->
+
+				<!--body wrapper start-->
+				<!--body wrapper end-->
+
+				<!--footer section start-->
+				<footer> 2016 &copy; Developed by Shirley </footer>
+				<!--footer section end-->
+			</div>
+			<!-- main content end-->
+		</section>
+	</div>
+</body>

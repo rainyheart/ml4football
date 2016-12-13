@@ -1,0 +1,101 @@
+<body class="sticky-header">
+<div ng-controller="studyTeamController">
+
+	<section>
+		<!-- left side start-->
+		<div ng-include="'left_menu.html'"></div>
+		<!-- left side end-->
+		<!-- main content start-->
+		<div class="main-content" >
+			<!-- header section start-->
+			<div class="header-section">
+
+				<!--toggle button start-->
+				<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+				<!--toggle button end-->
+
+				<!--search start-->
+				<input type="text" class="form-control" ng-model="searchText" placeholder="Search here..." />
+				<!--search end-->
+
+			</div>
+			<!-- header section end-->
+
+			<!-- page heading start-->
+			<div class="page-heading">
+				<h3>研发团队</h3>
+			</div>
+			<div>
+				&nbsp;
+				&nbsp;
+				<button class="btn btn-success" ng-click="studyTeam_add();">
+					<span class="save"></span>新建
+				</button>
+			</div>
+			<!-- news list start  -->
+			<div>
+				<div class="panel-body">
+					<table class="table  table-hover general-table">
+						<thead>
+							 <tr>
+		                        									<th>序号</th>
+																	<th>描述</th>
+																	<th>研发方向</th>
+																	<th>主题任务</th>
+																	<th>相关文章</th>
+																	<th>类型</th>
+																	<th>团队名称</th>
+																	
+									                        <th>操作</th>
+	                    </tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="studyTeam in items | filter:searchText">
+								<td ng-bind="$index+1"><a ng-click="studyTeam_edit(studyTeam.id);">1</a></td>
+																											
+								    																											<td>{{ studyTeam.description }} </td>
+								    																											<td>{{ studyTeam.studyDirection }} </td>
+								    																											<td>{{ studyTeam.subjectsTask }} </td>
+								    																											<td>{{ studyTeam.relativeArticles }} </td>
+								    																											<td>{{ studyTeam.type }} </td>
+								    																											<td>{{ studyTeam.teamGroupName }} </td>
+								    																											<!-- <td>{{ studyTeam.studyTeamcol }} </td> -->
+								    															
+								<td>
+									<button type="button" class="btn btn-primary"
+										ng-click="studyTeam_edit(studyTeam.id)">修改</button>
+									<button type="button" class="btn btn-danger"
+										ng-click="studyTeam_remove(studyTeam.id)">删除</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<nav>
+						<ul class="pagination">
+							<li><a ng-click="Previous()"> <span>上一页</span>
+							</a></li>
+							<li ng-repeat="page in pageList"
+								ng-class="{active: isActivePage(page)}"><a
+								ng-click="selectPage(page)">{{ page }}</a></li>
+							<li><a ng-click="Next()"> <span>下一页</span>
+							</a></li>
+						</ul>
+					</nav>
+				</div>
+				<hr>
+			</div>
+			<!-- news list end  -->
+
+			<!-- page heading end-->
+
+			<!--body wrapper start-->
+			<!--body wrapper end-->
+
+			<!--footer section start-->
+			<footer> 2016 &copy; Developed by Shirley </footer>
+			<!--footer section end-->
+		</div>
+		<!-- main content end-->
+	</section>
+</div>
+</body>

@@ -1,0 +1,83 @@
+
+<section>
+	<!-- left side start-->
+	<div ng-include="'left_menu.html'"></div>
+	<!-- left side end-->
+	<!-- main content start-->
+	<div class="main-content">
+		<!-- header section start-->
+		<div class="header-section">
+
+			<!--toggle button start-->
+			<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+			<!--toggle button end-->
+
+		</div>
+		<!-- header section end-->
+
+		<!-- page heading start-->
+		<div class="page-heading">
+			<h3>学术交流操作</h3>
+		</div>
+		<!-- news list start  -->
+		<div ng-controller="scholarInteractionAddController">
+			<form class="form-horizontal">
+				<input type="hidden" ng-model="id">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">学术交流日期:</label>
+					<div class="col-sm-10">
+						<input ng-model="scholarDate" placeholder="scholarDate">
+					</div>
+				</div>
+				<!-- 
+				<div class="form-group">
+						<input class="input-medium default-date-picker"  size="８" type="text" value="" />
+                    <label class="control-label col-md-4">Default Datepicker</label>
+                    <div class="col-md-6 col-xs-11">
+                        <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                        <span class="help-block">Select date</span>
+                    </div>
+                </div>
+				 -->
+				<div class="form-group">
+					<label class="col-sm-2 control-label">学术交流名称:</label>
+					<div class="col-sm-10">
+						<input ng-model="scholarName" placeholder="scholarName">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">学术交流内容：</label>
+					<div class="col-sm-10">
+						<input ng-model="scholarContent" placeholder="scholarContent">
+					</div>
+				</div>
+				<div>
+					&nbsp;
+					<button class="btn btn-success"
+						ng-click="scholarInteraction_save();">
+						<span class="save"></span>保存
+					</button>
+					&nbsp;
+					<button class="btn btn-warning"
+						ng-click="scholarInteraction_list();">
+						<span class="update"></span>返回
+					</button>
+					</button>
+				</div>
+			</form>
+			<hr>
+		</div>
+		<!-- news list end  -->
+
+		<!-- page heading end-->
+
+		<!--body wrapper start-->
+		<!--body wrapper end-->
+
+		<!--footer section start-->
+		<footer> 2016 &copy; Developed by Shirley </footer>
+		<!--footer section end-->
+	</div>
+	<!-- main content end-->
+</section>
+

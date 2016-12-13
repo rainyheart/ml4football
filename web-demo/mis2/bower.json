@@ -1,0 +1,25 @@
+{
+  "name": "mis",
+  "description": "it's a information system for master graduation",
+  "main": "",
+  "keywords": [
+    "mis"
+  ],
+  "authors": [
+    "shirley"
+  ],
+  "license": "MIT",
+  "homepage": "/mis",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.2"
+  }
+}

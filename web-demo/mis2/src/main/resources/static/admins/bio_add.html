@@ -1,0 +1,71 @@
+	<section>
+		<!-- left side start-->
+		<div ng-include="'left_menu.html'"></div>
+		<!-- left side end-->
+		<!-- main content start-->
+		<div class="main-content" >
+			<!-- header section start-->
+			<div class="header-section">
+
+				<!--toggle button start-->
+				<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+				<!--toggle button end-->
+
+			</div>
+			<!-- header section end-->
+
+			<!-- page heading start-->
+			<div class="page-heading">
+				<h3>Bio</h3>
+			</div>
+			<!-- news list start  -->
+			<div ng-controller="bioAddController">
+                <form class="form-horizontal">
+                	<input type="hidden" ng-model="id">
+                	 						<th>id</th>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">id:</label>
+							<div class="col-sm-10">
+								<input ng-model="id"  placeholder="id">
+							</div>
+					  	</div> 
+											<th>flmc</th>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">flmc:</label>
+							<div class="col-sm-10">
+								<input ng-model="flmc"  placeholder="flmc">
+							</div>
+					  	</div> 
+											<th>tSwmcId</th>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">tSwmcId:</label>
+							<div class="col-sm-10">
+								<input ng-model="tSwmcId"  placeholder="tSwmcId">
+							</div>
+					  	</div> 
+									  <div>
+				&nbsp;<button class="btn btn-success" ng-click="bio_save();">
+				<span class="save"></span>Save
+				</button>
+				&nbsp;<button class="btn btn-warning" ng-click="bio_list();">
+				<span class="update"></span>Return
+				</button>
+				</button>
+			</div>
+				</form>
+				<hr>
+			</div>
+			<!-- news list end  -->
+			
+			<!-- page heading end-->
+
+			<!--body wrapper start-->
+			<!--body wrapper end-->
+
+			<!--footer section start-->
+			<footer> 2016 &copy; Developed by Shirley </footer>
+			<!--footer section end-->
+		</div>
+		<!-- main content end-->
+	</section>
+
