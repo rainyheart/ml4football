@@ -1,2 +1,13 @@
 http://neuroph.sourceforge.net/
 
+Neuroph是轻量级的Java神经网络的框架，可以用来模拟常见的神经网络架构。少数基本类别相对应的基本网络的概念，它非常容易学习。
+它也有一个不错的GUI应用程序。
+
+Neuroph is an object-oriented neural network framework written in Java. 
+It can be used to create and train neural networks in Java programs. 
+Neuroph provides Java class library as well as GUI tool easyNeurons for creating and training neural networks.
+It is an open source project hosted at SourceForge under the Apache License. 
+Versions before 2.4 were licensed under LGPL 3, from this version the license is Apache 2.0 License.
+
+
+
